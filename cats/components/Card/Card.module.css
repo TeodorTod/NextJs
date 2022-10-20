@@ -2,9 +2,12 @@
     width: 18rem;
     height: 22.5rem;
     text-align: center;
+    margin-right: 3rem;
     color: rgb(97, 8, 97);
     margin-bottom: 2rem;
     box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.294);
+    border-radius: 20%;
+    overflow: hidden;
 }
 
 .card-header {
