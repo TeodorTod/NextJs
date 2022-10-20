@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Nav from "../../components/Nav/Nav"
 import Card from "../../components/Card/Card"
+import DefaultLayout from "../../layouts/Default";
+
 
 
 function idex() {
@@ -19,22 +21,23 @@ function idex() {
 
   return (
     <>
-      <Nav />
+      <DefaultLayout>
 
-      <div className="container mt-5">
+        <div className="container mt-5">
 
-        <div style={{ display: "flex", flexWrap: "wrap" }}>
-          {cats.map(cat => (
-            <Card key={cat.id}
-              name={cat.name}
-              phone={cat.phone}
-              email={cat.email}
-              image={cat.image}
-              id={cat.id}
-            />
-          ))}
+          <div style={{ display: "flex", flexWrap: "wrap" }}>
+            {cats.map(cat => (
+              <Card key={cat.id}
+                name={cat.name}
+                phone={cat.phone}
+                email={cat.email}
+                image={cat.image}
+                id={cat.id}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      </DefaultLayout>
     </>
   )
 }

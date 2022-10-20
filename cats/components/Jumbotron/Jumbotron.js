@@ -1,5 +1,9 @@
+import { useRouter } from "next/router";
+
 
 export default function Jumbotron() {
+    const router = useRouter();
+
     return (
         <div className="jumbotron jumbotron-fluid mt-5">
             <div className="container">
@@ -7,7 +11,12 @@ export default function Jumbotron() {
                 <p className="lead">
                     Find your new best friend today. Adobt a wonderful cat.
                 </p>
-                <button type="button" className="btn btn-primary">Start looking</button>
+                <button
+                    type="button"
+                    className="btn btn-primary"
+                    onClick={() => router.push("/cats")}>
+                    Start looking
+                </button>
             </div>
         </div>
     )
