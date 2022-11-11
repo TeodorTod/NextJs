@@ -52,7 +52,7 @@ export default function Dashboard() {
                         <Message {...post} key={post.id}>
                             <div className="flex gap-4">
                                 <button
-                                    onClick={() => deletePost(post.id)}
+                                    onClick={() => { window.confirm( 'Are you sure you want to delete this Card?', ) && deletePost(post.id) }}
                                     className="text-pink-600 flex items-center justify-center gap-2 py-2 text-sm"
                                 >
                                     <BsTrash2Fill className="text-2xl" /> Delete
